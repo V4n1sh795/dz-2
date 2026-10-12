@@ -179,26 +179,25 @@ sudo ss -tulnp
 
 
 ---
-<!-- Скопируйте секцию «Проблема 1» для каждой следующей обнаруженной проблемы. -->
-
-## Дополнительные наблюдения
-
-При необходимости зафиксируйте здесь сведения о процессе, `/proc`, маршрутизации или другие результаты исследования системы, которые не относятся только к одной проблеме.
-
-
-## Итоговый ход диагностики
-
-Кратко опишите весь путь от исходного нерабочего состояния до исправленного сервиса: в каком порядке проявлялись проблемы и как одна проверка приводила к следующей.
-
-
 ## Итоговая проверка
-
-Вставьте полный вывод успешного запуска:
 
 ```bash
 sudo ./scripts/check.sh
 ```
 
 ```text
-# вывод check.sh
+Linux DevOps Homework Checker
+
+[PASS] systemd ExecStart points to the application
+[PASS] service runs as homework:homework
+[PASS] state directory ownership and permissions are correct
+[PASS] service is enabled
+[PASS] service is active
+[PASS] running process has the expected UID
+[PASS] TCP/8080 listens on 0.0.0.0
+[PASS] GET /health returns the expected response
+[PASS] fixed systemd unit is saved in the repository
+[PASS] fixed application configuration is saved in the repository
+
+Result: 10 passed, 0 failed
 ```
