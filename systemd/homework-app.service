@@ -6,9 +6,11 @@ After=network.target
 Type=simple
 User=homework
 Group=homework
-ExecStart=/opt/linux-devops-homework/app.py
+ExecStart=/opt/linux-devops-homework/app/server.py
 Restart=on-failure
 RestartSec=2
 
 [Install]
 WantedBy=multi-user.target
+[Socket]
+ListenStream=0.0.0.0:8080
